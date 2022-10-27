@@ -14,42 +14,55 @@
 let choise = prompt(`choose between 'even' or 'odd' !!`);
 console.log(choise);
 
+//**********random number function *********** */
+
+function randomNumber(){
+    let cpuNumber = Math.round(Math.random() * 5);
+    return cpuNumber;
+ }
+
+ let cpuNumber = '';
+
+//************** let's game ****************** */
+
+// forced choise: odd or even ... or reloading page;
 if(choise != 'even' && choise != 'odd'){
     alert(`please, just write 'even' or 'odd' ...`);
     location.reload();
+    //if the choise is right, the game just begins;
 } else {
     let number = parseInt(prompt(`choise a number between 1 and 5`));
     console.log(`your number is ${number}`);
+    //forced choise .. a number between 1 and 5;
     if(number < 1 || number > 5){
         alert(`please, just write a number between 1 and 5 ...`);
         location.reload();
+    //if the choise is right, the cpu playes with you;    
     } else {
-        let resolt = number + randomNumber();
-        console.log(`random number is : ${randomNumber()}`);
-        console.log(`the resolt is ${resolt}`);        
-    }
-}
-
-function randomNumber(){
-    let randomNumber = Math.round(Math.random() * 5);
-    return randomNumber;
- }
-
-if( resolt % 2 == 0 ){
-    if( choise == `even`){
-        alert(`the resolt is ${resolt}.. it's even, you won !!`);
-        console.log(`the resolt is ${resolt}.. it's even, you won !!`);
-    } else {
-        alert(`the resolt is ${resolt}.. it's odd, you lost !!`);
-        console.log(`the resolt is ${resolt}.. it's odd, you lost !!`);
-    }
-} else {
-    if( choise == `odd`){
-        alert(`the resolt is ${resolt}.. it's odd, you won !!`);
-        console.log(`the resolt is ${resolt}.. it's odd, you won !!`);
-    } else {
-        alert(`the resolt is ${resolt}.. it's even, you lost !!`);
-        console.log(`the resolt is ${resolt}.. it's even, you lost !!`);
+        let resolt = ( number + cpuNumber );
+        console.log(`random number is : ${cpuNumber}`);
+        alert(`random number is : ${cpuNumber}`);
+        console.log(`the resolt is ${resolt}`);
+        alert(`the resolt is ${resolt}`); 
+        
+        //game resolt's elaboration;
+        if( resolt % 2 == 0 ){
+            if( choise == `even`){
+                alert(`the resolt is ${resolt}.. it's even, you won !!`);
+                console.log(`the resolt is ${resolt}.. it's even, you won !!`);
+            } else {
+                alert(`the resolt is ${resolt}.. it's even, you lost !!`);
+                console.log(`the resolt is ${resolt}.. it's even, you lost !!`);
+            }
+        } else {
+            if( choise == `odd`){
+                alert(`the resolt is ${resolt}.. it's odd, you won !!`);
+                console.log(`the resolt is ${resolt}.. it's odd, you won !!`);
+            } else {
+                alert(`the resolt is ${resolt}.. it's odd, you lost !!`);
+                console.log(`the resolt is ${resolt}.. it's odd, you lost !!`);
+            }
+        }
     }
 }
 
