@@ -19,9 +19,10 @@ console.log(choise);
 function randomNumber(){
     let cpuNumber = Math.round(Math.random() * 5);
     return cpuNumber;
- }
+}
 
- let cpuNumber = '';
+let cpu = randomNumber();
+
 
 //************** let's game ****************** */
 
@@ -39,9 +40,9 @@ if(choise != 'even' && choise != 'odd'){
         location.reload();
     //if the choise is right, the cpu playes with you;    
     } else {
-        let resolt = ( number + cpuNumber );
-        console.log(`random number is : ${cpuNumber}`);
-        alert(`random number is : ${cpuNumber}`);
+        let resolt = ( number + cpu );
+        console.log(`random number is : ${cpu}`);
+        alert(`random number is : ${cpu}`);
         console.log(`the resolt is ${resolt}`);
         alert(`the resolt is ${resolt}`); 
         
