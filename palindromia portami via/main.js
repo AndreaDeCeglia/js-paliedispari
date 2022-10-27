@@ -33,27 +33,12 @@
 //*************second way ********************** */
 //********************************************** */
 
-let input = prompt(`write a word to check !!`);
+// let input = prompt(`write a word to check !!`);
 
-if( input == input.split('').reverse().join('') ){
-    alert(`your word is palindrome !!`);
-} else {
-    alert(`your word ain't palindrome !!`);
-}
+// if( input == input.split('').reverse().join('') ){
+//     alert(`your word is palindrome !!`);
+// } else {
+//     alert(`your word ain't palindrome !!`);
+// }
 
 //*************************************** */
-
-//Pari e Dispari
-//L’utente sceglie pari o dispari e 
-//inserisce un numero da 1 a 5.
-//Generiamo un numero random 
-//(sempre da 1 a 5) per il computer 
-//(usando una funzione).
-//Sommiamo i due numeri
-//Stabiliamo se la somma dei due numeri 
-//è pari o dispari (usando una funzione)
-//Dichiariamo chi ha vinto.
-
-
-
-//**************************************** */
