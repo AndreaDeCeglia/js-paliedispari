@@ -3,30 +3,42 @@
 //Creare una funzione per capire 
 //se la parola inserita è palindroma
 
-let input = prompt(`write a word to check !!`);
-console.log(input);
+// let input = prompt(`write a word to check !!`);
+// console.log(input);
 
 
 
-function invert(){
+// function invert(){
 
-    let reversed = '';
-    for( let i = input.length -1; i >= 0; i--){
-        reversed = reversed += input[i];
-    }
+//     let reversed = '';
+//     for( let i = input.length -1; i >= 0; i--){
+//         reversed = reversed += input[i];
+//     }
 
-    return reversed;
+//     return reversed;
     
-}
+// }
 
-const reversed = invert();
+// const reversed = invert();
 
-if( input == reversed){
-    console.log(`your word is palindrom !!`);
-    alert(`your word is palindrom !!`);
+// if( input == reversed){
+//     console.log(`your word is palindrome !!`);
+//     alert(`your word is palindrome !!`);
+// } else {
+//     console.log(`your word ain't palindrome`);
+//     alert(`your word ain't palindrome !!`);
+// }
+
+//********************************************** */
+//*************second way ********************** */
+//********************************************** */
+
+let input = prompt(`write a word to check !!`);
+
+if( input == input.split('').reverse().join('') ){
+    alert(`your word is palindrome !!`);
 } else {
-    console.log(`your word ain't palindrom`);
-    alert(`your word ain't palindrom !!`);
+    alert(`your word ain't palindrome !!`);
 }
 
 //*************************************** */
