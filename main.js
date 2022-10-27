@@ -3,7 +3,31 @@
 //Creare una funzione per capire 
 //se la parola inserita è palindroma
 
+let input = prompt(`write a word to check !!`);
+console.log(input);
 
+
+
+function invert(){
+
+    let reversed = '';
+    for( let i = input.length -1; i >= 0; i--){
+        reversed = reversed += input[i];
+    }
+
+    return reversed;
+    
+}
+
+const reversed = invert();
+
+if( input == reversed){
+    console.log(`your word is palindrom !!`);
+    alert(`your word is palindrom !!`);
+} else {
+    console.log(`your word ain't palindrom`);
+    alert(`your word ain't palindrom !!`);
+}
 
 //*************************************** */
 
