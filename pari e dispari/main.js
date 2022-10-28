@@ -16,12 +16,13 @@ console.log(choise);
 
 //**********random number function *********** */
 
-function randomNumber(){
-    let cpuNumber = Math.round(Math.random() * 5);
-    return cpuNumber;
+function randomNumber(min, max){
+    //let cpuNumber = Math.round(Math.random() * (max - min + min)) + min;
+    //return cpuNumber;
+    return Math.round(Math.random() * (max - min + min)) + min;
 }
 
-let cpu = randomNumber();
+let cpu = randomNumber(1,5);
 
 
 //************** let's game ****************** */
@@ -67,4 +68,43 @@ if(choise != 'even' && choise != 'odd'){
     }
 }
 
-//**************************************** */
+//***************************************************** */
+//******* FUNCTION'S MASTER CLASS ********************* */
+//***************************************************** */
+
+let number;
+
+//*******sum function ************ */
+function sum(x,y){
+    let sum = x + y;
+    return sum;
+}
+//******************************** */
+
+
+let sumValue = sum(number, cpu);
+
+console.log( sum(number, cpu));
+
+//***evenOrOdd function*********** */
+function evenOrOdd(){
+
+    let control = '';
+
+    if (sumValue % 2 == 0){
+        control = 'even';
+        return control;
+    } else {
+        control = 'odd';
+        return control;
+    }
+}
+//******************************** */
+
+
+//winner
+if( choise == evenOrOdd() ){
+    console.log(`you won`);
+} else {
+    console.log(`you lost`);
+}

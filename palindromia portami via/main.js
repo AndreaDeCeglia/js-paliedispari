@@ -33,12 +33,12 @@
 //*************second way ********************** */
 //********************************************** */
 
-// let input = prompt(`write a word to check !!`);
+let input = prompt(`write a word to check !!`);
 
-// if( input == input.split('').reverse().join('') ){
-//     alert(`your word is palindrome !!`);
-// } else {
-//     alert(`your word ain't palindrome !!`);
-// }
+if( input == input.split('').reverse().join('') ){
+    alert(`your word is palindrome !!`);
+} else {
+    alert(`your word ain't palindrome !!`);
+}
 
 //*************************************** */
